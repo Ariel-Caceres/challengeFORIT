@@ -1,0 +1,82 @@
+
+section {
+    background-color: #2EC4B6;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+
+    align-items: center;
+}
+section .titulo{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    border-bottom: 1px solid white ;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+section .titulo span{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+section .filtro {
+    background-color: #FF3366;
+    display: flex;
+    box-shadow: 3px 3px 1px 1px;
+    padding: 7px;
+    gap: 10px;
+    align-items: center;
+    border-radius: 5px;
+}
+section .filtro:hover {
+    box-shadow: none;
+    transition: ease 0.5s ;
+}
+section .filtro .fa-solid{
+    font-size: 20px;
+    color: white;
+
+}
+section .filtro select{
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    padding: 3px;
+    border-radius: 7px;
+}
+section .tareas-container {
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+section .agregar-tarea {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+section .agregar-tarea button{
+    width: 50%;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 2px 2px black;
+    margin-bottom: 10px;
+}
+section .agregar-tarea button:hover{
+    box-shadow: none;
+    transition: ease 0.3s ;
+    border: 1px solid black; 
+}
+section .agregar-tarea button{
+    font-size: 20px;
+}
