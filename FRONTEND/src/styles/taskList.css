@@ -36,7 +36,7 @@ section .filtro:hover {
     transition: ease 0.5s ;
 }
 section .filtro .fa-solid{
-    font-size: 20px;
+    font-size: 25px;
     color: white;
 
 }
@@ -46,14 +46,150 @@ section .filtro select{
     border: none;
     padding: 3px;
     border-radius: 7px;
+    padding: 5px;
 }
 section .tareas-container {
     margin-top: 20px;
     width: 90%;
     display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: column;
+}
+section .tareas-container .cartel{
+    background-color: #92DED7;
+    display: flex;
     justify-content: center;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+
 }
 
+section .tareas-container .tarea{
+    width: 100%;
+    background-color: #92DED7;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 10px;
+    padding: 20px;
+}
+section .tareas-container .tarea:hover{
+    /* background-color: #60d1c8; */
+    box-shadow: 10px 5px 5px 1px;
+    /* background-color: #92DED7; */
+    transition: ease 0.3s;
+    border:  1px solid black;
+    
+}
+section .tareas-container .tarea input{
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* margin-right: 20px; */
+}
+section .tareas-container .tarea  input{
+    width: 20px;
+    height: 20px;
+    accent-color: red;
+}
+
+section .tareas-container .tarea .detalles{
+    width: 60%;
+    align-items: center;
+    }
+section .tareas-container .tarea .detalles h3{
+    font-size: 30px;
+}
+section .tareas-container .tarea .detalles p{
+    font-size: 20px;
+}
+section .tareas-container .tarea .iconos{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+section .tareas-container .tarea .iconos .fa-solid{
+    font-size: 20px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+}
+section .tareas-container .tarea .iconos .fa-solid:hover{
+    padding: 10px;
+    cursor: pointer;
+    color: #ff3366;
+    transition: ease 0.2s;
+    font-size: 25px;
+}
+section .tareas-container .tarea .iconos .editar{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+section .tareas-container .tarea .iconos .editar span{
+    background-color: #20A4F3;
+    position: absolute;
+    bottom:50px;
+    display: flex;
+    right: -10px;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 10px;
+    color: white;
+    animation: icono ease 1s infinite;
+    border: 1px solid white;
+    display: none;
+}
+section .tareas-container .tarea .iconos .editar:hover span{
+    display: flex;
+}
+section .tareas-container .tarea .iconos .editar span i{
+    font-size: 15px;
+}
+
+section .tareas-container .tarea .iconos .eliminar{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+section .tareas-container .tarea .iconos .eliminar span{
+    position: absolute;
+    align-items: center;
+    bottom:50px;
+    display: flex;
+    left: -25px;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 10px;
+    color: white;
+    border: 1px  solid white;
+    background-color: #20A4F3;
+    animation: icono ease 1s infinite;
+    display: none;
+}
+section .tareas-container .tarea .iconos .eliminar:hover span{
+    display: flex;
+}
+section .tareas-container .tarea .iconos .eliminar span i{
+    font-size: 15px;
+}
+
+
+@keyframes icono{
+    form{
+        bottom: 50px;
+    }
+    to{
+        bottom: 55px;
+    }
+}
 section .agregar-tarea {
     display: flex;
     width: 100%;
