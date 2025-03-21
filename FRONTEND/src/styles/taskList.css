@@ -47,6 +47,7 @@ section .filtro select{
     padding: 3px;
     border-radius: 7px;
     padding: 5px;
+    font-size: 15px;
 }
 section .tareas-container {
     margin-top: 20px;
@@ -77,10 +78,9 @@ section .tareas-container .tarea{
     padding: 20px;
 }
 section .tareas-container .tarea:hover{
-    /* background-color: #60d1c8; */
     box-shadow: 10px 5px 5px 1px;
-    /* background-color: #92DED7; */
     transition: ease 0.3s;
+    cursor: pointer;
     border:  1px solid black;
     
 }
@@ -89,7 +89,6 @@ section .tareas-container .tarea input{
     align-items: center;
     justify-content: center;
     display: flex;
-    /* margin-right: 20px; */
 }
 section .tareas-container .tarea  input{
     width: 20px;
@@ -100,12 +99,17 @@ section .tareas-container .tarea  input{
 section .tareas-container .tarea .detalles{
     width: 60%;
     align-items: center;
-    }
+}
+
 section .tareas-container .tarea .detalles h3{
     font-size: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 section .tareas-container .tarea .detalles p{
     font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 section .tareas-container .tarea .iconos{
     width: 20%;
@@ -207,6 +211,7 @@ section .agregar-tarea button{
     cursor: pointer;
     box-shadow: 3px 3px 2px 2px black;
     margin-bottom: 10px;
+    padding: 15px;
 }
 section .agregar-tarea button:hover{
     box-shadow: none;
