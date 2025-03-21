@@ -10,6 +10,7 @@ section {
 }
 section .titulo{
     display: flex;
+    flex-wrap: wrap;
     width: 90%;
     justify-content: space-between;
     border-bottom: 1px solid white ;
@@ -30,6 +31,7 @@ section .filtro {
     gap: 10px;
     align-items: center;
     border-radius: 5px;
+
 }
 section .filtro:hover {
     box-shadow: none;
@@ -117,6 +119,7 @@ section .tareas-container .tarea .iconos{
     justify-content: center;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 section .tareas-container .tarea .iconos .fa-solid{
     font-size: 20px;
@@ -220,4 +223,36 @@ section .agregar-tarea button:hover{
 }
 section .agregar-tarea button{
     font-size: 20px;
+}
+
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+    section {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    section {
+        width: 90%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    section {
+        width: 90%;
+    }
+    
+}
+@media (min-width: 300px) and (max-width: 600px) {
+    section {
+        width: 100%;
+    }
+  
+}
+@media (min-width: 100px) and (max-width: 300px) {
+    section {
+        width: 100%;
+    }
+
 }

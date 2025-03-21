@@ -3,14 +3,14 @@
     "id": 1,
     "title": "Método PUT",
     "description": "Hacer que se puedan editar las tareas",
-    "completed": true,
+    "completed": false,
     "createAt": "20/3/2025"
   },
   {
     "id": 2,
     "title": "Método DELETE",
     "description": "Hacer que se  puedan eliminar las tareas ",
-    "completed": false,
+    "completed": true,
     "createAt": "20/3/2025"
   },
   {
