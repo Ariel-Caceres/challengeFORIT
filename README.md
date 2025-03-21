@@ -2,13 +2,18 @@
 
 Crear una aplicación web que te permita manejar una lista de tareas, crear, eliminar y editar.
 
+![image](https://github.com/user-attachments/assets/9b4cefe0-9e70-4dd6-aed2-b1d6dac45d4a)
+![image](https://github.com/user-attachments/assets/b8dabca6-e602-43c4-9e10-849fa9dfa662)
+![image](https://github.com/user-attachments/assets/2e5cd3fa-3cd0-4bfb-8274-ba80465268ee)
+![image](https://github.com/user-attachments/assets/3bd45104-7905-4293-add9-4c40cd23bf38)
+
 ## Funcionalidades
   - Editar, eliminar y crear tareas.
   - Marcar una tarea como completada.
   - Ver detalles de la tarea.
-  - Filtro que permite visualizar tareas completada y no completadas
+  - Filtro que permite visualizar tareas completada y no completadas.
 
-## Tecnologías usadas ⚙
+## Tecnologías usadas ⚙🚀
 ### Frontend 🎨✨
 - React + Vite
 - Javascript
@@ -23,7 +28,7 @@ Crear una aplicación web que te permita manejar una lista de tareas, crear, eli
 ## Instrucciones para instalación 📝
 - Clonar repositorio: 
    ```bash
-    git clone https://github.com/ariix00/challenge-ForIT-2025
+    git clone https://github.com/Ariel-Caceres/challengeFORIT
     ```
 - Ir al directorio del proyecto:
    ```bash
@@ -43,7 +48,7 @@ Crear una aplicación web que te permita manejar una lista de tareas, crear, eli
     ```bash
     npm run dev
     ```
-- Open your browser and visit `http://localhost:5173`:
+- Abrir el navegador e ir a `http://localhost:5173`
 
 
 
