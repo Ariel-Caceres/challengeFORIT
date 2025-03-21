@@ -30,13 +30,14 @@ app.get("/api/tasks", (req, res) => {
 
 app.post("/api/tasks", (req, res) => {
     let ApiTareas = leerJson();
-    const { title, description } = req.body
+    titulo = req.body.title
+    descripcion = req.body.description
     let nuevaTarea = {
         id: ApiTareas.length == 0 ? 1 : ApiTareas[ApiTareas.length - 1].id + 1,
-        title: title,
-        description: description,
+        title: titulo,
+        description: descripcion,
         completed: false,
-        createAt: new Date().toLocaleDateString()
+        createAt: new Date().toLocaleString()
     }
     ApiTareas.push(nuevaTarea)
     crearJson(ApiTareas)
@@ -47,24 +48,36 @@ app.delete("/api/tasks/:id", (req, res) => {
     let tareas = leerJson()
     let id = parseInt(req.params.id)
     let tareaEncontrada = tareas.filter(t => t.id != id)
-    console.log(tareaEncontrada)
     crearJson(tareaEncontrada)
     res.json(tareaEncontrada)
 })
 
 
-app.put("/api/tasks/:id", (req, res) => {
+app.put("/api/check/:id", (req, res) => {
     let tareas = leerJson()
     let id = parseInt(req.params.id)
-    let tareaEncontrada = tareas.find(t=> t.id == id)
-    if(tareaEncontrada.completed == false){
+    let tareaEncontrada = tareas.find(t => t.id == id)
+    if (tareaEncontrada.completed == false) {
         tareaEncontrada.completed = true
-    }else{
+    } else {
         tareaEncontrada.completed = false
     }
     crearJson(tareas)
+    res.json({ redirect: "SI" });
+
 })
 
+app.put("/api/tasks/:id", (req, res) => {
+    let tareas = leerJson()
+    let id = req.params.id
+    let tareaAEditar = tareas.find(t => t.id == id)
+    tareaAEditar.title = req.body.title
+    tareaAEditar.description = req.body.description
+    crearJson(tareas)
+    // res.json({ redirect: "SI" });
+    res.json()
+
+})
 app.listen(port, () => {
     console.log(`App listening on  http://localhost:${port}`);
 })
