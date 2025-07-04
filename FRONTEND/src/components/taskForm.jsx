@@ -15,8 +15,8 @@ export const TaskForm = () => {
     const method = task ? "PUT" : "POST";
     try {
       const url = task?.id
-        ? `http://localhost:3000/api/tasks/${task.id}`
-        : "http://localhost:3000/api/tasks";
+        ? `https://challengeforit.onrender.com/api/tasks/${task.id}`
+        : "https://challengeforit.onrender.com/api/tasks";
 
       await fetch(url, {
         method,

@@ -10,7 +10,7 @@ export const TaskList = () => {
     const navigate = useNavigate();
     const fetchData = async () => {
         try {
-            let res = await fetch("http://localhost:3000/api/tasks")
+            let res = await fetch("https://challengeforit.onrender.com/api/tasks")
             let tareas = await res.json()
             if (tareas.redirect) {
                 window.location.href = tareas.redirect
@@ -27,14 +27,14 @@ export const TaskList = () => {
         fetchData()
     }, [])
     const eliminarTarea = (id) => {
-        fetch(`http://localhost:3000/api/tasks/${id}`, {
+        fetch(`https://challengeforit.onrender.com/api/tasks/${id}`, {
             method: "DELETE",
         })
         location.reload()
 
     }
     const checkBox = (id) => {
-        fetch(`http://localhost:3000/api/check/${id}`, {
+        fetch(`https://challengeforit.onrender.com/api/check/${id}`, {
             method: "PUT",
         })
         location.reload()
