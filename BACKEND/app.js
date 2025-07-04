@@ -13,6 +13,10 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"))
 
+app.get("/", (req, res) => {
+  res.send("Backend funcionando 😎");
+});
+
 
 const leerJson = () => {
     let data = fs.readFileSync(path.join(__dirname, "./data/task.json"))
