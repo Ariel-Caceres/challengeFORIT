@@ -30,14 +30,15 @@ export const TaskList = () => {
         fetch(`https://challengeforit.onrender.com/api/tasks/${id}`, {
             method: "DELETE",
         })
-        location.reload()
-
+        // location.reload()
+        fetchData()
     }
     const checkBox = (id) => {
         fetch(`https://challengeforit.onrender.com/api/check/${id}`, {
             method: "PUT",
         })
-        location.reload()
+        fetchData()
+        // location.reload()
 
     }
     const mensajes = {
