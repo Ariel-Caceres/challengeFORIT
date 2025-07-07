@@ -8,37 +8,33 @@ export const TaskList = () => {
     const [task, setTask] = useState([])
     const [value, setValue] = useState("todos")
     const navigate = useNavigate();
+
     const fetchData = async () => {
         try {
             let res = await fetch("https://challengeforit.onrender.com/api/tasks")
             let tareas = await res.json()
-            if (tareas.redirect) {
-                window.location.href = tareas.redirect
-            } else {
-                setTask(tareas)
-
-            }
+            setTask(tareas)
         } catch (error) {
             console.error("EXPLOTO EL SERVER", error);
-
         }
     }
+
     useEffect(() => {
         fetchData()
     }, [])
-    const eliminarTarea = (id) => {
-        fetch(`https://challengeforit.onrender.com/api/tasks/${id}`, {
+
+    const eliminarTarea = async (id) => {
+        const res = await fetch(`https://challengeforit.onrender.com/api/tasks/${id}`, {
             method: "DELETE",
         })
-        // location.reload()
+        if (!res.ok) throw new Error("Error al eliminar los datos")
         fetchData()
     }
-    const checkBox = (id) => {
-        fetch(`https://challengeforit.onrender.com/api/check/${id}`, {
+    const checkBox = async (id) => {
+        await fetch(`https://challengeforit.onrender.com/api/check/${id}`, {
             method: "PUT",
         })
         fetchData()
-        // location.reload()
 
     }
     const mensajes = {
@@ -92,11 +88,9 @@ export const TaskList = () => {
                                     navigate("/form", { state: { task: t } });
                                 }}></i>
                             </div>
-                            <div className="eliminar">
+                            <div className="eliminar" onClick={() => eliminarTarea(t.id)}>
                                 <span>Eliminar<i className="fa-regular fa-circle-down"></i></span>
-                                <i className="fa-solid fa-trash" id={t.id} onClick={() => {
-                                    eliminarTarea(t.id)
-                                }}></i>
+                                <i className="fa-solid fa-trash" id={t.id} ></i>
                             </div>
                         </div>
                     </div>
